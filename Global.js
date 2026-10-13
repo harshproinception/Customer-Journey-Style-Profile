@@ -137,7 +137,7 @@ function initializeRetalGlobalLayout() {
     });
 })();
 
-Adding this function for custom adding of class for the inconsistent views which are made in grid layout
+// Adding this function for custom adding of class for the inconsistent views which are made in grid layout
 $(document).ready(function () {
     function applyDetailTableClass() {
         $('[name="project_may_broker_lbl"]').each(function () {
