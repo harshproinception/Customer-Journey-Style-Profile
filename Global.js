@@ -138,20 +138,20 @@ function initializeRetalGlobalLayout() {
 })();
 
 // Adding this function for custom adding of class for the inconsistent views which are made in grid layout
-$(document).ready(function () {
-    function applyDetailTableClass() {
-        $('[name="project_may_broker_lbl"]').each(function () {
-            $(this)
-                .closest('.Grid-Layout')
-                .addClass('detail-table');
-        });
-    }
-    applyDetailTableClass();
-    var observer = new MutationObserver(function () {
-        applyDetailTableClass();
-    });
-    observer.observe(document.body, {
-        childList: true,
-        subtree: true
-    });
-});
+// $(document).ready(function () {
+//     function applyDetailTableClass() {
+//         $('[name="project_may_broker_lbl"]').each(function () {
+//             $(this)
+//                 .closest('.Grid-Layout')
+//                 .addClass('detail-table');
+//         });
+//     }
+//     applyDetailTableClass();
+//     var observer = new MutationObserver(function () {
+//         applyDetailTableClass();
+//     });
+//     observer.observe(document.body, {
+//         childList: true,
+//         subtree: true
+//     });
+// });
