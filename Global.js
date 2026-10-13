@@ -137,48 +137,48 @@ function initializeRetalGlobalLayout() {
     });
 })();
 
-// Adding this function for custom adding of class for the inconsistent views which are made in grid layout
-// $(document).ready(function () {
-//     function applyDetailTableClass() {
-//         $('[name="project_may_broker_lbl"]').each(function () {
-//             $(this)
-//                 .closest('.Grid-Layout')
-//                 .addClass('detail-table');
-//         });
-//     }
-//     applyDetailTableClass();
-//     var observer = new MutationObserver(function () {
-//         applyDetailTableClass();
-//     });
-//     observer.observe(document.body, {
-//         childList: true,
-//         subtree: true
-//     });
-// });
+Adding this function for custom adding of class for the inconsistent views which are made in grid layout
 $(document).ready(function () {
     function applyDetailTableClass() {
-        var nodes = document.querySelectorAll('[name="project_may_broker_lbl"]');
-        for (var i = 0; i < nodes.length; i++) {
-            var grid = nodes[i].closest('.Grid-Layout');
-            if (grid && !grid.classList.contains('detail-table')) {
-                grid.classList.add('detail-table');
-            }
-        }
-    }
- 
-    applyDetailTableClass();
- 
-    if (window.MutationObserver) {
-        var domTimer = null;
-        new MutationObserver(function () {
-            if (domTimer) return;
-            domTimer = setTimeout(function () {
-                domTimer = null;
-                applyDetailTableClass();
-            }, 150); // Batches multiple mutations into a single execution
-        }).observe(document.body, {
-            childList: true,
-            subtree: true
+        $('[name="project_may_broker_lbl"]').each(function () {
+            $(this)
+                .closest('.Grid-Layout')
+                .addClass('detail-table');
         });
     }
+    applyDetailTableClass();
+    var observer = new MutationObserver(function () {
+        applyDetailTableClass();
+    });
+    observer.observe(document.body, {
+        childList: true,
+        subtree: true
+    });
 });
+// $(document).ready(function () {
+//     function applyDetailTableClass() {
+//         var nodes = document.querySelectorAll('[name="project_may_broker_lbl"]');
+//         for (var i = 0; i < nodes.length; i++) {
+//             var grid = nodes[i].closest('.Grid-Layout');
+//             if (grid && !grid.classList.contains('detail-table')) {
+//                 grid.classList.add('detail-table');
+//             }
+//         }
+//     }
+ 
+//     applyDetailTableClass();
+ 
+//     if (window.MutationObserver) {
+//         var domTimer = null;
+//         new MutationObserver(function () {
+//             if (domTimer) return;
+//             domTimer = setTimeout(function () {
+//                 domTimer = null;
+//                 applyDetailTableClass();
+//             }, 150); // Batches multiple mutations into a single execution
+//         }).observe(document.body, {
+//             childList: true,
+//             subtree: true
+//         });
+//     }
+// });
