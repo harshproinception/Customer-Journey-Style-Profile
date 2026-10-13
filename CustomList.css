@@ -54,7 +54,7 @@
 
 .view.pi-has-mycust-list:is(*, span) input[name*="Search"],
 .grid.pi-has-mycust-list:is(*, span) input[name*="Search"] {
-    width: 240px !important;
+    width: 320px !important;
     height: 38px !important;
     padding: 0 12px !important;
     background: #ffffff !important;
