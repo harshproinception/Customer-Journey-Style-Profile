@@ -1171,3 +1171,8 @@ Converting textbox to the normal text
     box-sizing: border-box !important;
     overflow: hidden !important;
 }
+
+/* Adding this code for the removing the space  */
+.theme-entry .panel[name="CustomerJourney.CustomerOpportunity.Form Area Item"] {
+    margin-top: -70px !important;
+}
