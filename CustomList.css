@@ -161,7 +161,7 @@ body.pi-has-card-style:is(*, span) .view.pi-has-mycust-list:is(*, span) a[name*=
 body.pi-has-card-style:is(*, span) .grid.pi-has-mycust-list:is(*, span) a[name*="Add a customer"] {
     height: 38px !important;
     padding: 0 16px !important;
-    margin-left: 200px !important;
+    margin-left: 290px !important;
     margin-right: 0 !important;
     display: inline-flex !important;
     align-items: center !important;
