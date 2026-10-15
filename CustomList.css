@@ -400,3 +400,12 @@ body.pi-has-card-style:is(*, span) .view.pi-has-mycust-list:is(*, span) .grid-to
 body.pi-has-card-style:is(*, span) .grid.pi-has-mycust-list:is(*, span) .grid-toolbars {
     height: 80px !important;
 }
+
+/* =====================================================
+   FIX: UNNECESSARY HORIZONTAL SCROLLBAR IN K2 LISTS
+===================================================== */
+/* Preserve vertical scrolling if the list needs it */
+.theme-entry .view.pi-has-mycust-list .scroll-wrapper {
+    overflow-x: hidden !important;
+    overflow-y: auto !important;
+}
