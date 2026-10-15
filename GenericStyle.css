@@ -1058,3 +1058,12 @@ Converting textbox to the normal text
     padding-bottom: 20px !important;
     border: none !important;
 }
+/* Standard K2 error and validation classes */
+.SourceCode-Forms-Controls-Web-Label[name*="Error"],
+.SourceCode-Forms-Controls-Web-Label[name*="error"],
+.SourceCode-Forms-Controls-Web-DataLabel[name*="Error"],
+.SourceCode-Forms-Controls-Web-DataLabel[name*="error"] {
+    color: #DC2626 !important;
+    -webkit-text-fill-color: #DC2626 !important;
+    font-weight: 600 !important;
+}
