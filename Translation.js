@@ -74,35 +74,41 @@
         return document.querySelector(".goog-te-combo");
     }
 
-    window.translateToArabic = function () {
-        // PERF: Google Translate script is now loaded on demand
+window.translateToArabic = function () {
+        // 1. Start loading the Google Translate script
         initGoogleTranslate();
 
-        var combo = getGoogleSelector();
+        // 2. Wait for the dropdown AND its options to exist
+        function checkAndTranslate() {
+            var combo = getGoogleSelector();
 
-        if (!combo) {
-            if (config.retryCount < config.maxRetries) {
-                config.retryCount++;
-
-                setTimeout(window.translateToArabic, 500);
-            } else {
+            // FIX: Ensure combo exists AND Google has finished populating it with languages
+            if (combo && combo.options && combo.options.length > 0) {
+                
                 config.retryCount = 0;
-                console.error("[Translation] Google Translate is not ready.");
+                
+                try {
+                    combo.value = "ar";
+                    combo.dispatchEvent(new Event("change", { bubbles: true }));
+
+                    setTimeout(applyLanguageLayout, 800);
+                } catch (error) {
+                    console.error("[Translation] Arabic translation failed:", error);
+                }
+            } else {
+                // Not ready yet, keep checking every 200ms
+                if (config.retryCount < 30) { // Increased to 30 (6 seconds) to be safe on slow networks
+                    config.retryCount++;
+                    setTimeout(checkAndTranslate, 200);
+                } else {
+                    config.retryCount = 0;
+                    console.error("[Translation] Google Translate options did not load in time.");
+                }
             }
-
-            return;
         }
 
-        config.retryCount = 0;
-
-        try {
-            combo.value = "ar";
-            combo.dispatchEvent(new Event("change", { bubbles: true }));
-
-            setTimeout(applyLanguageLayout, 800);
-        } catch (error) {
-            console.error("[Translation] Arabic translation failed:", error);
-        }
+        // 3. Start the checking process
+        checkAndTranslate();
     };
 
     function clearTranslationCookie() {
