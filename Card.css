@@ -522,12 +522,6 @@ body, .theme-entry, .runtime-content, .runtime-view, .panel, .panel-body, .panel
     }
 }
 
-/* Fix: make the first dashboard card match the other cards */
-.theme-entry .view.pi-has-ops-cards:is(*, span)
-.detail-table[name="Dashboard_cards_table"] > .editor-cell:first-child {
-    background-color: #FFFFFF !important;
-    width: 225px !important;
-}
 
 .custom-card .card-number-btn {
     cursor: pointer !important;
@@ -560,3 +554,11 @@ body, .theme-entry, .runtime-content, .runtime-view, .panel, .panel-body, .panel
 .detail-table[name="Dashboard_cards_table"] > .editor-cell > span.SFC.SourceCode-Forms-Controls-Web-Label {
     pointer-events: none !important;
 }
+
+/* This code bypaas the generic code for making the first child of editor cell behave differently */
+.theme-entry .view.pi-has-ops-cards
+.detail-table[name="Dashboard_cards_table"] > .editor-cell:first-child {
+    background-color: #FFFFFF !important;
+    grid-column: auto !important;
+}
+
