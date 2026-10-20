@@ -31,6 +31,14 @@
     font-display: swap;
 }
 
+@font-face {
+    font-family: 'SangBleu Kingdom';
+    src: url('Fonts/SangBleuKingdom-Regular-WebXL.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
 
 
 
@@ -76,7 +84,7 @@
     --transition: 0.15s ease-in-out;
     
     /* Font Variables */
-    --font-title: '29LT Zarid Display Variable', 'SangBleu Kingdom', Georgia, serif;
+    --font-title:  'SangBleu Kingdom', '29LT Zarid Display Variable', Georgia, serif;
     --font-body: 'ABC Favorit Arabic Variable', 'Favorit', system-ui, apple-system, Segoe UI, sans-serif;
     --font-ar: 'ABC Favorit Arabic Variable', 'Zarid Display', system-ui, sans-serif;
     
