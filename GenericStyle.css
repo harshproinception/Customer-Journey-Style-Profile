@@ -285,12 +285,12 @@
 .theme-entry h6 {
     margin-top: 0 !important;
     color: var(--color-text) !important;
-    font-family: var(--font-body), Arial, sans-serif !important;
+    font-family: var(--font-title), Arial, sans-serif !important;
 }
 
 .theme-entry h1 {
-    font-size: 26px !important;
-    font-weight: 700 !important;
+    font-size: 30px !important;
+    font-weight: 500 !important;
 }
 
 .theme-entry h2 {
