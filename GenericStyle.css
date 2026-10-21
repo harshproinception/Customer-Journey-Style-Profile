@@ -294,18 +294,18 @@
 }
 
 .theme-entry h2 {
-    font-size: 22px !important;
-    font-weight: 700 !important;
+    font-size: 26px !important;
+    font-weight: 500 !important;
 }
 
 .theme-entry h3 {
-    font-size: 18px !important;
-    font-weight: 700 !important;
+    font-size: 22px !important;
+    font-weight: 500 !important;
 }
 
 .theme-entry h4 {
-    font-size: 16px !important;
-    font-weight: 600 !important;
+    font-size: 18px !important;
+    font-weight: 550 !important;
 }
 
 .theme-entry a.SourceCode-Forms-Controls-Web-Button,
