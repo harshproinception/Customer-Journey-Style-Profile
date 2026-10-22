@@ -1,9 +1,16 @@
 /* =========================================
 1. CSS VARIABLES (COLORS & FONTS)
 ========================================= */
-@font-face {
+/* @font-face {
     font-family: '29LT Zarid Display Variable';
     src: url('Fonts/29LTZaridDisplayVar-VF.woff2') format('woff2'), url('Fonts/29LTZaridDisplayVar-VF.ttf') format('truetype');
+    font-weight: 100 900;
+    font-display: swap;
+} */
+
+@font-face {
+    font-family: '29LT Zarid Display Variable';
+    src: url('Fonts/29LTZaridDisplayVar-VF.ttf') format('truetype');
     font-weight: 100 900;
     font-display: swap;
 }
@@ -38,13 +45,22 @@
     font-display: swap;
 }    */
 
-@font-face {
+/* @font-face {
     font-family: 'Zarid Display';
     src: url('Fonts/29LTZaridDisplay-Bold.woff2') format('woff2'), url('Fonts/29LTZaridDisplay-Bold.otf') format('opentype');
     font-weight: 300 700;
     font-style: normal;
     font-display: swap;
+} */
+
+@font-face {
+    font-family: 'Zarid Display';
+    src: url('Fonts/29LTZaridDisplay-Bold.otf') format('opentype');
+    font-weight: 300 700;
+    font-style: normal;
+    font-display: swap
 }
+
 
 @font-face {
     font-family: 'SangBleu Kingdom';
