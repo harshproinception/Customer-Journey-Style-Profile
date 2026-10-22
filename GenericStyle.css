@@ -24,11 +24,19 @@
 
 @font-face {
     font-family: 'Favorit';
+    src: url('Fonts/ABCFavoritArabicVariable.ttf') format('truetype');
+    font-weight: 200 700;
+    font-style: normal;
+    font-display: swap;
+}
+
+/* @font-face {
+    font-family: 'Favorit';
     src: url('Fonts/ABCFavoritArabicVariable.woff2') format('woff2'), url('Fonts/ABCFavoritArabicVariable.ttf') format('truetype');
     font-weight: 200 700;
     font-style: normal;
     font-display: swap;
-}   
+}    */
 
 @font-face {
     font-family: 'Zarid Display';
