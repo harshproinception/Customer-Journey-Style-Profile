@@ -8,9 +8,16 @@
     font-display: swap;
 }
 
-@font-face {
+/* @font-face {
     font-family: 'ABC Favorit Arabic Variable';
     src: url('Fonts/ABCFavoritArabicVariable.woff2') format('woff2'), url('Fonts/ABCFavoritArabicVariable.ttf') format('truetype');
+    font-weight: 100 900;
+    font-display: swap;
+} */
+
+@font-face {
+    font-family: 'ABC Favorit Arabic Variable';
+    src: url('Fonts/ABCFavoritArabicVariable.ttf') format('truetype');
     font-weight: 100 900;
     font-display: swap;
 }
