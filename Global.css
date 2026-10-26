@@ -434,11 +434,7 @@ body.theme-entry:has(> form > .runtime-content .runtime-form) > .popupManager > 
 
 /* Adding this code for hididng the translation button on header */
 
-a[name="btnEnglish"],
-a[name="btnArabic"] {
+.theme-entry a[name="btnEnglish"],
+.theme-entry a[name="btnArabic"] {
     display: none !important;
-}
-
-.theme-entry .runtime-form:has([name="PortalSelectionStyleDlb"]) h1[name="Choose_lbl"] {
-    padding-bottom: 8px !important;
 }
