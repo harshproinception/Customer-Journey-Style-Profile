@@ -445,3 +445,10 @@ body.theme-entry:has(> form > .runtime-content .runtime-form) > .popupManager > 
 .theme-entry a[name="btnArabic"] {
     display: none !important;
 }
+
+
+/* Adding this code to bypaas the global margin and padding which is coming from the side nav */
+.theme-entry .form:has(span[name="SideNav_Space_dlb"]) .row:not(.pi-has-header-layout):not(.pi-has-home-btn:is(*, a)) {
+    margin-inline-start: 0px !important;
+    width: 100% !important;
+}
