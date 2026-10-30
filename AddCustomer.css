@@ -228,3 +228,30 @@ body.pi-has-add-cust .input-control.control-group-container .input-control-t,
 body.pi-has-add-cust .input-control.control-group-container .input-control-b {
     border: none !important;
 }
+
+/* Apply red border to invalid textboxes */
+body.pi-has-add-cust input.SourceCode-Forms-Controls-Web-TextBox.invalid {
+    border: 1px solid #D32F2F !important; /* Standard invalid red */
+}
+
+/* Optional: Keep the red styling when the user focuses on an invalid textbox */
+body.pi-has-add-cust input.SourceCode-Forms-Controls-Web-TextBox.invalid:focus {
+    border-color: #D32F2F !important;
+    box-shadow: 0 0 0 3px rgba(211, 47, 47, 0.12) !important; 
+}
+
+/* Apply red border to radio options when the group is invalid */
+body.pi-has-add-cust .control-group-container.invalid .multi-select-box-list-item label.radio {
+    border-color: #D32F2F !important;
+}
+
+/* Optional: Subtle red background to make the error state more obvious */
+body.pi-has-add-cust .control-group-container.invalid .multi-select-box-list-item label.radio {
+    background-color: #FEF2F2 !important; 
+}
+
+/* Keep the normal selected state styling even if it was flagged invalid */
+body.pi-has-add-cust .control-group-container.invalid .multi-select-box-list-item label.radio:has(input:checked) {
+    border-color: #9E5A44 !important;
+    background-color: #FBF4F0 !important;
+}
