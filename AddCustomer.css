@@ -255,3 +255,8 @@ body.pi-has-add-cust .control-group-container.invalid .multi-select-box-list-ite
     border-color: #9E5A44 !important;
     background-color: #FBF4F0 !important;
 }
+
+body.pi-has-add-cust .theme-entry [name="Country Label"]:not(:has(span))::after {
+    content: "*";
+    color: red;
+}
