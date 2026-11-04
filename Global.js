@@ -13,7 +13,8 @@
         [".retal-custom-header-layout", "pi-has-header-layout"],
         ["span[name=\"space_style_dlb\"]", "pi-has-space-style"],
         ["[name=\"header_name_label\"]", "pi-has-header-name"],
-        ["[name=\"Header_style_dbl\"]", "pi-has-header-style"]
+        ["[name=\"Header_style_dbl\"]", "pi-has-header-style"],
+        ["[name=\"PortalSelectionStyleDlb\"]", "pi-has-portal-selection"]
     ];
 
     function sync() {
@@ -123,19 +124,13 @@ function initializeRetalGlobalLayout() {
 
         $(document).on('click', '.form a.SourceCode-Forms-Controls-Web-Button', function () {
             var $row = $(this).closest('.row');
-            
-            // Check if this click happened in the sidebar menu (identified by having a 'Home btn')
             if (!$row.find('a[name="Home btn"]').length) {
                 return;
             }
             
             // Only change the active states IF the clicked button is NOT "Retal_Cat_Btn"
             if ($(this).attr('name') !== 'Retal_Cat_Btn') {
-                
-                // Remove the active class from the old button
                 $row.find('a.SourceCode-Forms-Controls-Web-Button').removeClass('active-nav');
-                
-                // Add the active class to the newly clicked button
                 $(this).addClass('active-nav');
             }
         });
@@ -148,6 +143,23 @@ function initializeRetalGlobalLayout() {
 })();
 
 // Adding this function for custom adding of class for the inconsistent views which are made in grid layout
+// $(document).ready(function () {
+//     function applyDetailTableClass() {
+//         $('[name="project_may_broker_lbl"]').each(function () {
+//             $(this)
+//                 .closest('.Grid-Layout')
+//                 .addClass('detail-table');
+//         });
+//     }
+//     applyDetailTableClass();
+//     var observer = new MutationObserver(function () {
+//         applyDetailTableClass();
+//     });
+//     observer.observe(document.body, {
+//         childList: true,
+//         subtree: true
+//     });
+// });
 $(document).ready(function () {
     function applyDetailTableClass() {
         var nodes = document.querySelectorAll('[name="project_may_broker_lbl"]');
